@@ -27,14 +27,12 @@ function makePac() {
   newimg.src = './images/PacMan1.png';
   newimg.width = 100;
 
-  // TODO: set position here
+  
   newimg.style.left = position.x;
   newimg.style.top = position.y;
 
-  // TODO add new Child image to game
   game.appendChild(newimg);
-
-  // return details in an object
+  
   return {
     position,
     velocity,
@@ -43,7 +41,7 @@ function makePac() {
 }
 
 function update() {
-  // loop over pacmen array and move each one and move image in DOM
+  
   pacMen.forEach((item) => {
     checkCollisions(item);
     item.position.x += item.velocity.x;
